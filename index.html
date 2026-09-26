@@ -1,0 +1,477 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>قاف | QAF Workspace</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="auth-mode">
+  <header class="topbar app-topbar" hidden>
+    <button id="menu" class="icon-btn" aria-label="فتح القائمة">☰</button>
+    <a class="brand-mark" href="#" data-p="home" aria-label="قاف الرئيسية">
+      <b>ق</b>
+      <span>قاف<small>QAF</small></span>
+    </a>
+    <nav class="tabs" aria-label="تنقل قاف">
+      <button class="tab on" data-p="home">الرئيسية</button>
+      <button class="tab" data-p="projects">المشاريع</button>
+      <button class="tab" data-p="brands">علاماتي التجارية</button>
+      <button class="tab" data-p="explore">استكشف هويتنا</button>
+      <button class="tab" data-p="calendar">التقويم</button>
+    </nav>
+    <div class="top-actions">
+      <button class="primary compact" data-p="new-project">+ مشروع جديد</button>
+      <button class="profile-pill" id="profileMenu" aria-label="ملف المستخدم">نورة</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="auth" class="auth-shell page on">
+      <div class="auth-card">
+        <div class="auth-visual">
+          <img src="assets/images/qaf-hero-workspace.png" alt="مساحة عمل قاف تربط الهوية الثقافية بالحملات الحديثة">
+          <div class="auth-caption">
+            <a class="brand-mark auth-brand" href="#" aria-label="قاف">
+              <b>ق</b>
+              <span>قاف<small>QAF</small></span>
+            </a>
+            <h2>من الثقافة إلى قرار إبداعي قابل للتنفيذ.</h2>
+            <p>مساحة عمل تجمع فهم العلامة، نقاط الالتقاء، وفرص التفعيل في تجربة واحدة.</p>
+          </div>
+        </div>
+        <div class="auth-content">
+          <form id="loginForm" class="auth-form">
+            <span class="ey">QAF WORKSPACE</span>
+            <h1 class="app-title">تسجيل الدخول</h1>
+            <label>البريد الإلكتروني<input type="email" required value="noura@luma.sa"></label>
+            <label>كلمة المرور<input type="password" required value="qaf-demo"></label>
+            <button class="primary" type="submit">تسجيل الدخول</button>
+            <p class="auth-switch">ليس لديك حساب؟ <button type="button" class="link-btn" data-auth="signup">إنشاء حساب</button></p>
+          </form>
+          <form id="signupForm" class="auth-form" hidden>
+            <span class="ey">QAF WORKSPACE</span>
+            <h1 class="app-title">إنشاء حساب</h1>
+            <label>الاسم<input required value="نورة"></label>
+            <label>البريد الإلكتروني<input type="email" required></label>
+            <label>كلمة المرور<input type="password" required></label>
+            <label>اسم الشركة/الوكالة<input required value="LUMA Beauty"></label>
+            <button class="primary" type="submit">إنشاء الحساب</button>
+            <p class="auth-switch">لديك حساب؟ <button type="button" class="link-btn" data-auth="login">تسجيل الدخول</button></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section id="home" class="page">
+      <div class="dashboard-hero">
+        <div class="hero-copy">
+          <span class="ey">مساحة العمل</span>
+          <h1 class="app-title">مرحبًا، نورة</h1>
+          <p>نظرة تشغيلية عالمية على العلامات، المشاريع، ونقاط الالتقاء الجاهزة للتحويل إلى حملات واقعية.</p>
+          <div class="quick-actions">
+            <button class="primary" data-p="new-project">+ مشروع جديد</button>
+            <button data-p="brands">+ إضافة علامة تجارية</button>
+          </div>
+        </div>
+        <div class="hero-media">
+          <img src="assets/images/qaf-hero-workspace.png" alt="لوحة عمل لعلامة تجارية تجمع ورد الطائف والمواد البصرية الحديثة">
+          <div class="floating-proof">
+            <strong>92%</strong>
+            <span>ملاءمة ورد الطائف مع LUMA</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="metric-strip" aria-label="ملخص مساحة العمل">
+        <article>
+          <span>مشاريع نشطة</span>
+          <strong>3</strong>
+          <small>2 بانتظار اختيار المسار</small>
+        </article>
+        <article>
+          <span>عناصر محفوظة</span>
+          <strong>12</strong>
+          <small>5 مناسبة للجمال والضيافة</small>
+        </article>
+        <article>
+          <span>جاهزية الهوية</span>
+          <strong>86%</strong>
+          <small>LUMA مكتملة وقابلة للمطابقة</small>
+        </article>
+        <article>
+          <span>فرص موسمية</span>
+          <strong>4</strong>
+          <small>أقربها موسم ورد الطائف</small>
+        </article>
+      </div>
+
+      <div class="dashboard-grid">
+        <article class="workspace-card brand-snapshot">
+          <div class="card-head">
+            <span class="ey">علاماتي التجارية</span>
+            <button class="text-inline" data-p="brands">عرض الكل</button>
+          </div>
+          <div class="brand-card mini">
+            <div class="luma-mark">L</div>
+            <div>
+              <h2>LUMA Beauty</h2>
+              <p>ناعمة • راقية • معاصرة</p>
+              <strong class="level">3 مشاريع</strong>
+            </div>
+          </div>
+          <div class="palette-row tight" aria-label="ألوان LUMA">
+            <i style="background:#173E32"></i>
+            <i style="background:#841512"></i>
+            <i style="background:#E7B97B"></i>
+            <i style="background:#B9AEC9"></i>
+          </div>
+        </article>
+        <article class="workspace-card project-pulse">
+          <span class="ey">المشروع النشط</span>
+          <h2>Pink Lip Tint Campaign</h2>
+          <p>المسار المختار: ورد الطائف</p>
+          <div class="progress-line"><i style="width:58%"></i></div>
+          <div class="task-list">
+            <span>✓ فهم المشروع</span>
+            <span>✓ نقاط الالتقاء</span>
+            <span>• التوجه الإبداعي</span>
+          </div>
+        </article>
+        <article class="workspace-card recommendation-card">
+          <span class="ey">اقتراح قاف</span>
+          <h2>ورد الطائف × LUMA</h2>
+          <p>ارتباط قوي بين اللون النباتي، الرقة، وسردية المكان.</p>
+          <div class="score-ring"><strong>92</strong><span>ملاءمة</span></div>
+        </article>
+        <article class="workspace-card opportunity-card">
+          <span class="ey">فرصة قادمة</span>
+          <h2>موسم ورد الطائف</h2>
+          <p>نافذة مناسبة لإطلاق مجموعة Lip Tint بقصة محلية دقيقة.</p>
+          <button data-p="calendar">استكشف الفرصة</button>
+        </article>
+        <article class="workspace-card image-story-card">
+          <img src="assets/images/qaf-culture-board.png" alt="لوحة بصرية لعناصر من الهوية السعودية">
+          <div>
+            <span class="ey">مكتبة بصرية</span>
+            <h2>صور مرجعية تساعد الفريق يرى الاتجاه قبل اعتماده.</h2>
+          </div>
+        </article>
+      </div>
+
+      <div class="workbench-grid">
+        <section class="workbench-panel">
+          <div class="card-head">
+            <span class="ey">قائمة اليوم</span>
+            <button class="text-inline" data-p="project">فتح المشروع</button>
+          </div>
+          <div class="check-row done"><b>01</b><span>تثبيت المسار الثقافي المختار</span><small>تم</small></div>
+          <div class="check-row on"><b>02</b><span>صياغة mood direction للحملة</span><small>قيد العمل</small></div>
+          <div class="check-row"><b>03</b><span>رفع التصميم الأول للتحقق</span><small>لاحقًا</small></div>
+        </section>
+        <section class="workbench-panel insight-panel">
+          <span class="ey">ملاحظة ذكية</span>
+          <h2>الهوية الحالية تميل للهدوء، لذلك الأفضل أن يكون ورد الطائف مرجع لون ومكان، وليس زخرفة مباشرة.</h2>
+          <div class="inline-actions">
+            <button class="primary" data-p="project">اعتماد كتوجه</button>
+            <button data-p="explore">مقارنة عناصر أخرى</button>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <section id="brands" class="page">
+      <div class="section-head compact-head">
+        <span class="ey">Brand Profiles</span>
+        <h1 class="app-title">علاماتي التجارية</h1>
+        <button class="primary" id="showBrandForm">+ إضافة علامة تجارية</button>
+      </div>
+
+      <div class="brand-workspace">
+        <aside class="profile-panel">
+          <div class="brand-card selected">
+            <div class="luma-mark">L</div>
+            <div>
+              <span class="ey">مكتمل ✓</span>
+              <h2>LUMA Beauty</h2>
+              <p>ناعمة • راقية • معاصرة</p>
+              <strong class="level">3 مشاريع</strong>
+            </div>
+          </div>
+          <div class="palette-row" aria-label="ألوان LUMA">
+            <i style="background:#173E32"></i>
+            <i style="background:#841512"></i>
+            <i style="background:#E7B97B"></i>
+            <i style="background:#B9AEC9"></i>
+            <i style="background:#F4E8CC"></i>
+          </div>
+        </aside>
+
+        <div class="brand-flow" id="brandFlow">
+          <form id="brandForm" class="form-grid">
+            <label>اسم العلامة<input required value="LUMA Beauty"></label>
+            <label>القطاع<input required value="Beauty"></label>
+            <label>السوق المستهدف<input required value="السعودية"></label>
+            <label>الجمهور<input required value="شابات 18-30"></label>
+            <label>الموقع الإلكتروني — اختياري<input value="luma.example"></label>
+            <label>رفع الشعار<input type="file" accept="image/png,image/jpeg"></label>
+            <div class="upload-focus">
+              <h2>رفع Brand Guidelines</h2>
+              <p>PDF / PNG / JPG</p>
+              <input id="guidelinesFile" type="file" accept=".pdf,image/png,image/jpeg">
+              <button type="button" class="text-btn" id="manualBrand">ليس لدي ملف هوية — سأدخل المعلومات يدويًا</button>
+            </div>
+            <button class="primary" type="submit">تحليل الهوية</button>
+          </form>
+
+          <div id="brandLoading" class="analysis-state" hidden>
+            <b>ق</b>
+            <h2>قاف تحلل هوية العلامة...</h2>
+            <div class="loader-line"></div>
+          </div>
+
+          <div id="brandResult" class="analysis-result" hidden>
+            <span class="ey">تم فهم هوية LUMA</span>
+            <h2>ملف الهوية المقترح</h2>
+            <div class="result-grid">
+              <article><small>الشخصية</small><p>ناعمة • راقية • معاصرة</p></article>
+              <article><small>الألوان</small><div class="palette-row tight"><i style="background:#173E32"></i><i style="background:#841512"></i><i style="background:#E7B97B"></i><i style="background:#B9AEC9"></i></div></article>
+              <article><small>الأسلوب البصري</small><p>Minimal / Soft / Refined</p></article>
+              <article><small>الجمهور</small><p>شابات 18-30</p></article>
+            </div>
+            <div class="inline-actions">
+              <button id="editAnalysis">تعديل</button>
+              <button class="primary" id="confirmBrand">تأكيد ملف الهوية</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="page">
+      <div class="section-head compact-head">
+        <span class="ey">Projects</span>
+        <h1 class="app-title">المشاريع</h1>
+        <button class="primary" data-p="new-project">+ مشروع جديد</button>
+      </div>
+      <div class="project-list">
+        <article class="match featured">
+          <div>
+            <span class="ey">LUMA Beauty</span>
+            <h2>Pink Lip Tint Campaign</h2>
+            <p>المسار المختار: ورد الطائف</p>
+            <strong class="level">03 التوجه الإبداعي</strong>
+          </div>
+          <button class="primary" data-p="project">فتح المشروع</button>
+        </article>
+        <article class="match">
+          <div>
+            <span class="ey">LUMA Beauty</span>
+            <h2>Ramadan Mini Set</h2>
+            <p>بحاجة إلى اختيار فرصة موسمية مناسبة قبل بناء الاتجاه.</p>
+            <strong class="level">02 نقاط الالتقاء</strong>
+          </div>
+          <button data-p="project">استكمال</button>
+        </article>
+        <article class="match">
+          <div>
+            <span class="ey">LUMA Beauty</span>
+            <h2>Pop-up Display Concept</h2>
+            <p>مسار أولي حول الضوء، الظل، والرواشين كقاعدة تكوين.</p>
+            <strong class="level">مسودة</strong>
+          </div>
+          <button data-p="project">فتح</button>
+        </article>
+      </div>
+    </section>
+
+    <section id="new-project" class="page">
+      <div class="section-head">
+        <span class="ey">New Project</span>
+        <h1 class="app-title">مشروع جديد</h1>
+      </div>
+      <form id="projectForm" class="project-form">
+        <label>لأي علامة تعمل؟
+          <select required>
+            <option>LUMA Beauty</option>
+          </select>
+        </label>
+        <label>ما الذي تعمل عليه؟
+          <select required>
+            <option>إطلاق منتج</option>
+            <option>حملة تسويقية</option>
+            <option>Packaging</option>
+            <option>محتوى Social Media</option>
+            <option>إعلان</option>
+            <option>فعالية</option>
+          </select>
+        </label>
+        <label>اسم المشروع<input required value="Pink Lip Tint Launch"></label>
+        <label>وصف المنتج<textarea required>مجموعة Lip Tint بدرجات وردية جديدة.</textarea></label>
+        <label>الهدف<input required value="إطلاق المنتج"></label>
+        <button class="primary" type="submit">اكتشف نقاط الالتقاء</button>
+      </form>
+    </section>
+
+    <section id="project" class="page">
+      <div class="project-header">
+        <div>
+          <span class="ey">LUMA Beauty</span>
+          <h1 class="app-title">Pink Lip Tint Campaign</h1>
+          <p>إطلاق منتج • ورد الطائف</p>
+        </div>
+        <button data-p="projects">كل المشاريع</button>
+      </div>
+
+      <div class="workflow" aria-label="مسار المشروع">
+        <button class="step done" data-stage="brief">01 فهم المشروع ✓</button>
+        <button class="step on" data-stage="matches">02 نقاط الالتقاء</button>
+        <button class="step" data-stage="direction">03 التوجه الإبداعي</button>
+        <button class="step" data-stage="activation">04 فرصة التفعيل</button>
+        <button class="step" data-stage="verify">05 التحقق من التصميم</button>
+      </div>
+
+      <div id="stageBrief" class="stage-panel">
+        <article class="workspace-card">
+          <span class="ey">فهم المشروع</span>
+          <h2>Pink Lip Tint Launch</h2>
+          <p>مجموعة Lip Tint بدرجات وردية جديدة.</p>
+          <button class="primary" data-stage="matches">اكتشف نقاط الالتقاء</button>
+        </article>
+      </div>
+
+      <div id="stageMatches" class="stage-panel on">
+        <div class="section-head small-head">
+          <span class="ey">قاف تقترح من المكتبة</span>
+          <h2>نقاط الالتقاء</h2>
+        </div>
+        <div id="matchList" class="match-list"></div>
+      </div>
+
+      <div id="stageDirection" class="stage-panel">
+        <div class="direction-summary">
+          <article>
+            <span class="ey">القرار الإبداعي</span>
+            <h2>استخدام ورد الطائف كمنطق لوني وسردي، لا كأيقونة متكررة.</h2>
+          </article>
+          <article>
+            <span class="ey">مخرجات مطلوبة</span>
+            <p>لوحة ألوان، نظام خامات، قواعد تصوير، وتحذيرات استخدام.</p>
+          </article>
+        </div>
+        <div class="signature-map compact-signature" aria-label="خريطة نقطة الالتقاء">
+          <div class="identity-side">
+            <small>هوية LUMA</small>
+            <h2>LUMA Beauty</h2>
+            <span>Soft</span><span>Elegant</span><span>Contemporary</span>
+          </div>
+          <b>ق</b>
+          <div class="culture-side">
+            <small>من هويتنا</small>
+            <h2>ورد الطائف</h2>
+            <span>Natural</span><span>Delicate</span><span>Place Story</span>
+          </div>
+        </div>
+        <div class="direction-grid">
+          <article><small>Color Direction</small><h2>وردي عميق، وردي غباري، حبر داكن، ورق فاتح.</h2><div class="palette-row tight"><i style="background:#841512"></i><i style="background:#B9AEC9"></i><i style="background:#E7B97B"></i><i style="background:#173E32"></i></div></article>
+          <article class="direction-image"><img src="assets/images/qaf-culture-board.png" alt="مراجع بصرية لورد الطائف والعناصر المرتبطة"></article>
+          <article><small>Mood</small><h2>ناعم، معماري، هادئ، سعودي معاصر.</h2></article>
+          <article><small>Pattern</small><h2>إيقاع خفيف يستخدم كتنظيم لا كزخرفة طاغية.</h2></article>
+          <article><small>Narrative</small><h2>قصة مكان ونبات ولون.</h2></article>
+          <article class="avoid"><small>تجنب</small><h2>نسخ الوردة حرفيًا أو إخفاء شخصية LUMA.</h2></article>
+        </div>
+        <button class="primary stage-next" data-stage="activation">انتقل إلى فرصة التفعيل</button>
+      </div>
+
+      <div id="stageActivation" class="stage-panel">
+        <div class="timeline-list">
+          <article class="timeline-item">
+            <b>01</b>
+            <div>
+              <span class="ey">الربيع</span>
+              <h2>موسم ورد الطائف</h2>
+              <p>نافذة مناسبة لإطلاق Pink Lip Tint مع قصة مكان ونبات ولون.</p>
+              <button class="primary" data-stage="verify">انتقل إلى التحقق</button>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div id="stageVerify" class="stage-panel">
+        <div class="verify-grid">
+          <div class="drop" id="dropZone">
+            <b>ق</b>
+            <h2>رفع التصميم</h2>
+            <p>PNG / JPG</p>
+            <button class="primary" id="chooseDesign">اختيار التصميم</button>
+            <input type="file" id="designFile" accept="image/*" hidden>
+          </div>
+          <div id="report" class="report">
+            <h2>Design + Cultural Verification</h2>
+            <div class="report-block good">
+              <h3>توافق هوية العلامة ✓</h3>
+              <p>الاتجاه يحافظ على رقة LUMA ودرجاتها الهادئة.</p>
+            </div>
+            <div class="report-block warn">
+              <h3>سلامة التوظيف الثقافي ⚠</h3>
+              <p>استخدام ورد الطائف مناسب كسياق نباتي ومكاني. خفف التكرار الزخرفي.</p>
+            </div>
+            <button class="primary" id="saveReport">حفظ الملاحظات</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="explore" class="page">
+      <div class="section-head">
+        <span class="ey">Explore</span>
+        <h1 class="app-title">استكشف هويتنا</h1>
+      </div>
+      <div class="explore-showcase">
+        <img src="assets/images/qaf-culture-board.png" alt="لوحة صور للعناصر الثقافية المتاحة في قاف">
+        <div>
+          <span class="ey">Visual Culture Library</span>
+          <h2>مكتبة قابلة للبحث تربط العنصر الثقافي بالقطاع، الحساسية، وإشاراته البصرية.</h2>
+          <p>كل عنصر يظهر كمدخل بحثي يساعد الفريق على بناء اتجاه معاصر ومحترم بدل استخدام الرمز كزخرفة مباشرة.</p>
+        </div>
+      </div>
+      <div class="filters">
+        <input id="search" placeholder="ابحث داخل العناصر...">
+        <select id="region">
+          <option value="">كل المناطق</option>
+          <option>الطائف</option>
+          <option>جدة</option>
+          <option>نجد</option>
+          <option>عسير</option>
+        </select>
+        <select id="sensitivity">
+          <option value="">كل درجات الحساسية</option>
+          <option>مفتوح</option>
+          <option>مقيّد</option>
+        </select>
+      </div>
+      <div id="culture" class="culture-grid"></div>
+    </section>
+
+    <section id="element" class="page">
+      <button class="text-btn" data-p="project">العودة إلى المشروع</button>
+      <div id="elementBody"></div>
+    </section>
+
+    <section id="calendar" class="page">
+      <div class="section-head">
+        <span class="ey">Calendar</span>
+        <h1 class="app-title">التقويم</h1>
+      </div>
+      <div id="calendarList" class="timeline-list"></div>
+    </section>
+  </main>
+
+  <div class="najdi-divider" aria-hidden="true"></div>
+  <div id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/matching.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
