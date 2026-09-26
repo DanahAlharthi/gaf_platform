@@ -28,11 +28,15 @@ function page(id) {
   if (id === "calendar") renderCalendar();
 }
 
+const STAGES = ["brief", "matches", "activation", "verify"];
+
 function showStage(stage) {
   $$(".stage-panel").forEach((node) => node.classList.toggle("on", node.id === `stage${stage[0].toUpperCase()}${stage.slice(1)}`));
-  $$(".step").forEach((node) => {
-    node.classList.toggle("on", node.dataset.stage === stage);
-    node.classList.toggle("done", ["brief", "matches", "direction", "activation", "verify"].indexOf(node.dataset.stage) < ["brief", "matches", "direction", "activation", "verify"].indexOf(stage));
+  // The creative direction panel is the detail view of the common-ground step.
+  const current = stage === "direction" ? "matches" : stage;
+  $$(".step[data-stage]").forEach((node) => {
+    node.classList.toggle("on", node.dataset.stage === current);
+    node.classList.toggle("done", STAGES.indexOf(node.dataset.stage) < STAGES.indexOf(current));
   });
 }
 
@@ -123,7 +127,6 @@ function renderCulture() {
         <span>${element.region}</span>
       </div>
       <h2>${element.name}</h2>
-      <p>حساسية الاستخدام: <b>${element.sensitivity}</b></p>
       <small>${element.reference}</small>
     </article>
   `).join("");
@@ -231,6 +234,13 @@ $("#projectForm").addEventListener("submit", (event) => {
 
 $("#chooseDesign").addEventListener("click", () => $("#designFile").click());
 $("#designFile").addEventListener("change", () => {
+  const file = $("#designFile").files[0];
+  if (file) {
+    const preview = $("#reportPreview");
+    preview.src = URL.createObjectURL(file);
+    preview.hidden = false;
+  }
+  $("#reportDate").textContent = new Date().toLocaleDateString("ar-SA", { year: "numeric", month: "long", day: "numeric" });
   $("#dropZone").classList.add("done");
   $("#dropZone").querySelector("h2").textContent = "تم رفع التصميم التجريبي";
   $("#dropZone").querySelector("p").textContent = "قاف عرضت الملاحظات بجانب الرفع.";
@@ -238,6 +248,13 @@ $("#designFile").addEventListener("change", () => {
   toast("اكتمل تحليل التصميم");
 });
 $("#saveReport").addEventListener("click", () => toast("تم حفظ الملاحظات"));
+$("#exportReport").addEventListener("click", () => {
+  // The print stylesheet shows only the report; the browser's "Save as PDF" produces the file.
+  const title = document.title;
+  document.title = "تقرير قاف - Pink Lip Tint Campaign";
+  window.addEventListener("afterprint", () => { document.title = title; }, { once: true });
+  window.print();
+});
 
 renderCulture();
 renderMatches();
